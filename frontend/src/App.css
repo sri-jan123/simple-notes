@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f7fb;
+  font-family: Inter, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.input-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+  background: white;
+  transition: 0.3s;
+}
+
+.input-box input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.input-box button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  background: #4f46e5;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-box button:hover {
+  transform: translateY(-2px);
+  background: #4338ca;
+}
+
+.notes {
+  display: grid;
+  gap: 16px;
+}
+
+.note-card {
+  background: white;
+  padding: 18px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.note-card:hover {
+  transform: translateY(-3px);
+}
+
+.note-card span {
+  color: #334155;
+  font-size: 16px;
+  word-break: break-word;
+  max-width: 80%;
+}
+
+.note-card button {
+  border: none;
+  background: #ef4444;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.note-card button:hover {
+  background: #dc2626;
+}
+
+.empty-state {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .input-box {
+    flex-direction: column;
+  }
+
+  .input-box button {
+    width: 100%;
+  }
+
+  .note-card {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .note-card span {
+    max-width: 100%;
+  }
+}
