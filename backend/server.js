@@ -9,7 +9,14 @@ const Note = require("./models/Note");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://notesfrontend.z29.web.core.windows.net"
+    ]
+  })
+);
 app.use(express.json());
 
 mongoose
